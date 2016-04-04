@@ -1,30 +1,16 @@
 <!DOCTYPE html>
+<html>
 <head>
-    <meta charset="utf-8">
-    <title></title>
-<!--    <script src="lib.js"></script>-->
+    <meta charset="UTF-8">
+    <title>Document</title>
 </head>
-<body onload="refresh()">
-    <h1 id = 'test'></h1>
+<body>
+<?php
+require_once 'lib.php';
+$love = new Love();
+$love->refresh();
+?>
+
+
 </body>
-
-<script>
-    function refresh(){
-             var a = "<?php
-            header("content-type:text/html;charset=utf-8");
-            require_once 'lib.php';
-            $love = new Love();
-            $love->getLoveTime();
-            ?>";
-             document.getElementById('test').innerHTML = a;
-            setTimeout(function () {
-            refresh();
-        },1000);
-    }
-</script>
-
-
-
-
-
-
+</html>

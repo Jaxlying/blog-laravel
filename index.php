@@ -3,14 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <script src="lib.js"></script>
 </head>
-<body>
-<?php
-require_once 'lib.php';
-$love = new Love();
-$love->refresh();
-?>
-
+<body onload="refreshLove()">
+<h3 id="love"></h3>
 
 </body>
 </html>

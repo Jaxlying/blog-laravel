@@ -1,15 +1,6 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>blog-laravel</title>
-</head>
-<body>
-@foreach($articles as $article)
-    标题: <a href="{{url('article/'.$article->id)}}">{{$article->title}}</a> <br>
-@endforeach
-</body>
-</html>
+@extends('layouts.frontend')
+@section('content')
+    @foreach($articles as $article)
+        标题:<a href="{{url('article/'.$article->id)}}">{{$article->title}}</a> <br>
+    @endforeach
+@endsection

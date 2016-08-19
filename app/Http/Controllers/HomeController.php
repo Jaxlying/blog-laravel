@@ -27,4 +27,9 @@ class HomeController extends Controller
     {
         return view('home')->withArticles(Article::all());
     }
+
+    public function show($id)
+    {
+        return view('article/article')->withArticle(Article::find($id));
+    }
 }

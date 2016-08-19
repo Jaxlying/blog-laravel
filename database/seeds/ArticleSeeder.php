@@ -12,13 +12,13 @@ class ArticleSeeder extends Seeder
     public function run()
     {
         //
-        DB::table('articles')->delete();
-        for ($i = 0 ; $i < 10; $i++){
+        for ($i = 1;$i < 50; $i++){
             \App\Article::create([
-                'title'=>'Title'.$i,
-                'body'=>'Body'.$i,
-                'user_id'=>6,
+                'title'=>'这是title'.$i,
+                'body'=>'这是body这是body这是body这是body这是body这是body'.$i,
+                'user_id'=>'1',
             ]);
         }
+
     }
 }

@@ -30,6 +30,6 @@ class HomeController extends Controller
 
     public function show($id)
     {
-        return view('article/article')->withArticle(Article::find($id));
+        return view('article/article')->withArticle(Article::with('hasManyComments')->find($id));
     }
 }

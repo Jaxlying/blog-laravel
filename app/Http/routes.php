@@ -19,3 +19,5 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/article/{id}','HomeController@show');
 
+Route::post('/comment/{id}','CommentController@store');
+

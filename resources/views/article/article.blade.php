@@ -13,7 +13,7 @@
     <hr>
     <form action="{{url('comment/'.$article->id)}}" method="post">
         {!! csrf_field() !!}
-        文章id <input type="text" value="{{$article->id}}" name="article_id"> <br>
+        <input type="text" value="{{$article->id}}" name="article_id" style="display: none">
         姓名 <input type="text" name="name"><br>
         邮箱 <input type="text" name="email"><br>
         内容 <textarea name="body"></textarea>

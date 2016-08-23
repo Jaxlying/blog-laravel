@@ -40,4 +40,10 @@ class ArticleController extends Controller
         $article->save();
         return redirect('/admin/article');
     }
+
+    public function destroy($id){
+        $article = Article::find($id);
+        $article->delete();
+        return redirect('/admin/article');
+    }
 }
